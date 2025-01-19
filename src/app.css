@@ -16,6 +16,10 @@ h3 {
   color: #532;
 }
 
+code {
+  color: #800;
+}
+
 :is(p, ul, ol, li, blockquote, pre, h1, h2, h3, h4, h5, h6):hover {
   background: #9871;
 }
