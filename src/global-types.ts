@@ -7,5 +7,4 @@ declare global {
     const equals: typeof Taste.equals
     const not: typeof Taste.not
     const which: typeof Taste.which
-    const debug: typeof Taste.debug
 }
