@@ -29,7 +29,7 @@ body {
   --crepe-color-error: #ba1a1a;
   --crepe-color-hover: #e0e0e0;
   --crepe-color-selected: #d5d5d5;
-  --crepe-color-inline-area: #cacaca;
+  --crepe-color-inline-area: transparent;
 
   --crepe-font-title: "Times New Roman", Times, Georgia,
     "Liberation Serif", serif;
@@ -98,13 +98,8 @@ body {
 .milkdown .ProseMirror code {
   color: #800;
   padding: 0;
-  background: transparent;
 }
 
-:is(p, ul, ol, li, blockquote, pre, h1, h2, h3, h4, h5, h6):hover {
-  background: #9871;
-}
-
-:is(strong, em, b, i, a, code):hover {
+.milkdown .ProseMirror :is(strong, em, b, i, a, code):hover {
   background: #f4f4f4;
 }
