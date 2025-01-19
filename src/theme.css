@@ -1,0 +1,110 @@
+html,
+body {
+  --background-color: #dfffd9;
+  --foreground-color: #421;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.ProseMirror.editor {
+  min-height: 100vh;
+  padding-block: 1em;
+  padding-inline: 6em;
+}
+
+.milkdown {
+  --crepe-color-background: var(--background-color);
+  --crepe-color-on-background: var(--foreground-color);
+  --crepe-color-surface: #f9f8f7;
+  --crepe-color-surface-low: #f9f8f7;
+  --crepe-color-on-surface: #1c1c1c;
+  --crepe-color-on-surface-variant: #4d4d4d;
+  --crepe-color-outline: #888;
+  --crepe-color-primary: #333333;
+  --crepe-color-secondary: #cfcfcf;
+  --crepe-color-on-secondary: #000000;
+  --crepe-color-inverse: #f0f0f0;
+  --crepe-color-on-inverse: #1a1a1a;
+  --crepe-color-inline-code: #ba1a1a;
+  --crepe-color-error: #ba1a1a;
+  --crepe-color-hover: #e0e0e0;
+  --crepe-color-selected: #d5d5d5;
+  --crepe-color-inline-area: #cacaca;
+
+  --crepe-font-title: "Times New Roman", Times, Georgia,
+    "Liberation Serif", serif;
+  --crepe-font-default: "Times New Roman", Times, Georgia,
+    "Liberation Serif", serif;
+  --crepe-font-code: monospace;
+
+  --crepe-shadow-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  --crepe-shadow-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.milkdown milkdown-table-block :is(.handle, .cell-handle) {
+  transition-delay: 0s;
+  transition-duration: 0.068s;
+}
+
+.milkdown milkdown-block-handle {
+  display: none;
+}
+
+.milkdown .ProseMirror :is(h1, h2, h3) {
+  color: #532;
+}
+
+.milkdown .ProseMirror :is(h1, h2) {
+  border-block-end: 1px solid #4444;
+  padding-block-end: 0;
+  line-height: 130%;
+}
+
+.milkdown .ProseMirror h1 {
+  margin-block: 1em;
+  font-size: 2rem;
+  color: #730;
+  text-shadow: 1px 0 #f008;
+}
+
+.milkdown .ProseMirror h2 {
+  margin-block: 2em 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.milkdown .ProseMirror h3 {
+  margin-block: 1em 0.5em;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.milkdown .ProseMirror table {
+  min-width: 0;
+  width: unset;
+  border-collapse: separate;
+  --table-border: 1px solid #ddd;
+  border: var(--table-border);
+  background-color: #fff;
+  --default-cell-min-width: 5em;
+}
+
+.milkdown .ProseMirror :is(th, td) {
+  border: var(--table-border);
+}
+
+.milkdown .ProseMirror code {
+  color: #800;
+  padding: 0;
+  background: transparent;
+}
+
+:is(p, ul, ol, li, blockquote, pre, h1, h2, h3, h4, h5, h6):hover {
+  background: #9871;
+}
+
+:is(strong, em, b, i, a, code):hover {
+  background: #f4f4f4;
+}

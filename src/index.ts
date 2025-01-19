@@ -1,23 +1,25 @@
-import {defaultValueCtx, Editor, rootCtx} from "@milkdown/kit/core"
-import {commonmark} from "@milkdown/kit/preset/commonmark"
-import {history} from "@milkdown/kit/plugin/history"
-import {upload} from "@milkdown/kit/plugin/upload"
+import {Crepe} from "@milkdown/crepe"
+import "@milkdown/crepe/theme/common/style.css"
 
 import "./reset.css"
-import "./app.css"
+import "@milkdown/crepe/theme/frame.css"
+import "./theme.css"
 
-const markdown = `# Milkdown Vanilla Commonmark
+const defaultValue = `
+# Cobble
 
-> You're scared of a world where you're needed.
+A Markdown-enabled rich text editor. This text is editable! Try it!
 
-This is a demo for using Milkdown with **Vanilla Typescript**.`
+Hint: type \`/table\` to insert a table, and \`/image\` to insert an image.
+`
 
-Editor.make()
-    .config((ctx) => {
-        ctx.set(rootCtx, "#app")
-        ctx.set(defaultValueCtx, markdown)
-    })
-    .use(commonmark)
-    .use(upload)
-    .use(history)
-    .create()
+const crepe = new Crepe({
+    root: document.getElementById("app"),
+    defaultValue,
+    featureConfigs: {
+        placeholder: {
+            text: "",
+        },
+    },
+})
+crepe.create()
